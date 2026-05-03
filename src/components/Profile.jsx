@@ -1,51 +1,72 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 function Profile() {
+  const { langData } = useLanguage();
+
+  // Safety check: langData henüz yüklenmemişse hata almamak için
+  if (!langData) return null;
+
+  //nesne yapısına uygun destructuring
+  const {
+    dateText,
+    subTitle,
+    dateOfBirth,
+    cityText,
+    city,
+    educationText,
+    education,
+    preferredRoleText,
+    preferredRole,
+  } = langData.profileSection.personalInfo;
+
   return (
-    <div className="flex flex-col justify-center items-center gap-y-8 mx-[30px]">
-      <div>
-        <h3 className=" text-4xl">Profile</h3>
+    <div className="w-full flex flex-col gap-y-8 items-center md:items-start">
+      {/* Başlık */}
+      <div className="w-full px-1 md:px-0">
+        <h3 className="text-4xl font-inter text-center ">
+          {langData.profileSection.title}
+        </h3>
       </div>
-      <div className="flex justify-center items-center flex-1 flex-col md:flex-row gap-x-14">
-        <div className="relative  w-full flex-1 max-w-lg">
-          <div className="absolute -bottom-2 -right-2 w-full h-full  bg-[#898787] rounded-xl z-0"></div>
-          <div className="relative z-10 w-full h-full bg-white rounded-xl overflow-hidden shadow-xl">
-            <div className="flex flex-col my-8 mx-8 gap-4 text-[18px]">
-              <h4 className="text-[#EA2678]! text-2xl! font-playfair mb-2">
-                Basic İnformation
+
+      <div className="flex flex-col md:flex-row items-center justify-between gap-14 w-full">
+        {/* KART ALANI */}
+        <div className="relative flex-1 max-w-lg">
+          {/* Dekoratif Arka Plan (Gölge efekti) */}
+          <div className="absolute top-3 left-3 w-full h-full bg-[#525252] dark:bg-[#252525] rounded-xl z-0"></div>
+          <div className="relative z-10 w-full h-auto bg-white  dark:bg-[#525252] rounded-xl shadow-xl p-8">
+            <div className="flex flex-col gap-4 text-[18px]">
+              <h4 className="text-[#EA2678] text-2xl font-playfair mb-2">
+                {subTitle}
               </h4>
 
-              <div className="grid grid-cols-[150px_1fr] gap-4">
-                <span className="font-semibold">Doğum Tarihi</span>
-                <span>21.03.1991</span>
-              </div>
-              <div className="grid grid-cols-[150px_1fr] gap-4">
-                <span className="font-semibold">İkamet Şehri</span>
-                <span>Malatya</span>
-              </div>
-              <div className="grid grid-cols-[150px_1fr] gap-4">
-                <span className="font-semibold ">Eğitim Durumu</span>
-                <span>
-                  İstanbul Teknik Üni. Elektronik ve Haberleşme Müh. 2018
-                </span>
-              </div>
-              <div className="grid grid-cols-[150px_1fr] gap-4">
-                <span className="font-semibold ">Tercih Ettiği Rol</span>
-                <span>Full Stack Developer,Back End Developer</span>
-              </div>
+              {/* Veri Döngüsü */}
+              {[
+                { label: dateText, value: dateOfBirth },
+                { label: cityText, value: city },
+                { label: educationText, value: education },
+                { label: preferredRoleText, value: preferredRole },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="grid grid-cols-[130px_1fr] sm:grid-cols-[160px_1fr] gap-x-4 items-start"
+                >
+                  <span className="font-semibold">{item.label}</span>
+                  <span className="leading-snug wrap-break-word">
+                    {item.value}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col gap-6 max-w-lg m-4 sm:m-0">
-          <h4 className="font-playfair text-[24px] mt-8 md:m-0">About Me</h4>
-          <p className="text-[18px]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-            aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus
-            ratione soluta aperiam sit voluptate? Dicta quod deserunt quam
-            temporibus cumque magnam!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-            aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus
-            ratione soluta aperiam sit voluptate? Dicta quod deserunt quam
-            temporibus cumque magnam!
-           
+
+        {/* ABOUT ME ALANI */}
+        <div className="flex-1 flex flex-col gap-6 max-w-lg">
+          <h4 className="font-playfair text-[24px] text-center md:text-left">
+            {langData.profileSection.aboutMe.subTitle}
+          </h4>
+          <p className="text-[18px] leading-relaxed">
+            {langData.profileSection.aboutMe.text}
           </p>
         </div>
       </div>

@@ -1,19 +1,18 @@
 import { Moon} from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 export const ToggleTheme=()=> {
-    const [isDark,setIsDark]=useState(true);
-    useEffect(()=>{
-        isDark?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark');
-    },[isDark])
-
+    const {setIsDark,isDark} = useContext(ThemeContext);
   return (
-    <div className='flex items-center gap-3'>
+    <div className='flex items-center gap-3 cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 group'
+        onClick={()=>setIsDark(!isDark)} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') }
+    >
         <button
-        onClick={()=>setIsDark(!isDark)}
-        className='relative rounded-full shrink-0 p-1 transition-all duration-500 w-14 h-6 bg-pink-600 dark:bg-darkMain items-center'
+        
+        className='relative rounded-full shrink-0 p-1 transition-all duration-500 w-14 h-6 bg-pink-600 dark:bg-black items-center'
         >
-        <div className={`w-4 h-4 rounded-full bg-[#FFE082] dark:bg-darkMain flex items-center justify-center transition-transform duration-500
+        <div className={`w-4 h-4 rounded-full bg-[#FFE082] dark:bg-black flex items-center justify-center transition-transform duration-500
             ${isDark ? 'translate-x-0' : 'translate-x-8'}`}>
             <Moon className="w-4 h-4 text-[#FFE86E] fill-[#FFE86E]" strokeWidth={3}/>
         </div>
