@@ -2,19 +2,17 @@ import { MoveRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 function Hero() {
-  const {langData} = useLanguage();
-  const {greeting,intro,cta} =langData.heroSection;
-  
+  const { langData } = useLanguage();
+  const { greeting, intro, cta } = langData.heroSection;
+
   return (
     // justify-between yerine büyük ekranlarda içeriği ortalayan yapı
-    <div className="flex flex-col sm:flex-row justify-between items-center py-20 gap-10">
+    <div className="flex flex-col sm:flex-row justify-between items-start py-20 gap-10">
       {/* Metin Alanı: mr-5 ve mr-16 kaldırıldı */}
       <div className="flex-1 max-w-5xl flex flex-col gap-8 font-inter">
         <div className="flex flex-col gap-4 mr-4">
           <span className="text-[24px] lg:text-[30px]">{greeting}</span>
-          <h1 className="text-[28px] lg:text-[42px] leading-tight">
-            {intro}
-          </h1>
+          <h1 className="text-[28px] lg:text-[42px] leading-tight">{intro}</h1>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -37,19 +35,28 @@ function Hero() {
               />
             </a>
           </div>
-          <div className="md:text-[18px] text-[14px] max-w-lg ">
-            <p className="leading-relaxed">
-              {cta.pre} <span className="text-pink-600 hover:underline">{cta.freelance}</span> {cta.mid} <span className="text-pink-600 hover:underline"> {cta.services}</span>{cta.post}
-              <span className="group inline-flex items-center mx-2 whitespace-nowrap translate-y-1 group-hover:translate-x-2 text-pink-600">
+          <div className="md:text-[18px] text-[14px] max-w-lg min-h-[12rem] md:min-h-[9rem] lg:min-h-[8rem]">
+           
+            <p className="leading-relaxed min-h-[3.5em]">
+              {cta.pre}
+              <span className="text-pink-600 font-medium">
+                {" "}
+                {cta.freelance}
+              </span>
+              {cta.mid}
+              <span className="text-pink-600 font-medium"> {cta.services}</span>
+              {cta.post}
+
+              {/* Email kısmını alt satıra veya yanına kontrollü sabitlemek için block/inline-block ayarı */}
+              <span className="group inline-flex items-center ml-2 whitespace-nowrap align-middle">
                 <MoveRight className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:translate-x-2 text-pink-600" />
                 <a
-                href="mailto:the.mustafacoskun@gmail.com"
-                className="text-pink-600 transition-all duration-300 group-hover:ml-1"
-              >
-                the.mustafacoskun@gmail.com
-              </a>
+                  href="mailto:the.mustafacoskun@gmail.com"
+                  className="text-pink-600 transition-all duration-300 hover:underline"
+                >
+                  the.mustafacoskun@gmail.com
+                </a>
               </span>
-              
             </p>
           </div>
         </div>
