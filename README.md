@@ -35,12 +35,23 @@ This project implements a specialized **"Zero-Component" SVG strategy**:
 ## 📁 Project Structure
 ```text
 src/
-├── components/       # UI Components (Header, Hero, Skills, etc.)
-│   ├── icons/        # Custom-built dynamic SVG components
-│   └── ToggleTheme/  # Dark mode logic
-├── contexts/         # Theme, Language, and Project Contexts
-├── data.js           # Centralized localized content
-└── App.jsx           # Main layout and Provider orchestration
+├── assets/           # Static assets and media
+├── components/       # Functional UI components
+│   ├── icons/        # Custom SVG components (Anot, Bar, BigBar, Circle, Rect)
+│   ├── Footer.jsx    # Page footer with social links
+│   ├── Header.jsx    # Navigation and language toggle
+│   ├── Hero.jsx      # Introduction section with profile image
+│   ├── Profile.jsx   # Personal information and about me section
+│   ├── Projects.jsx  # Dynamic GitHub projects display
+│   ├── Skills.jsx    # Tech stack and skills grid
+│   └── ToggleTheme.jsx # Dark/Light mode switch
+├── contexts/         # Theme, Language, and Project Context Providers
+├── hooks/            # Custom hooks (useLocalStorage.jsx)
+├── App.css           # Global component styles
+├── App.jsx           # Main application logic and provider orchestration
+├── data.js           # Centralized localized content (EN/TR)
+├── index.css         # Tailwind directives and base styles
+└── main.jsx          # Application entry point
 
 ```
 
