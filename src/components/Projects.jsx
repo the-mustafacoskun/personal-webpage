@@ -39,13 +39,13 @@ function Projects() {
            <div className="w-full flex justify-center -mb-16 mt-6">
             <div className="relative w-[85%] md:w-full max-w-sm">
               <img
-                src="src/assets/laptops/mac.svg"
+                src="/laptops/mac.svg"
                 className=" object-contain"
                 alt="Project Preview"
               />
               <div className="absolute top-[5%] left-[4%] w-[92%] h-[77%] overflow-hidden rounded-xs">
                 <img
-                  src="src/assets/laptops/left.svg" // Buraya kendi proje fotoğrafını koy
+                  src="/laptops/left.svg" 
                   className="w-full h-full object-cover object-top"
                   alt="Screen Content"
                 />
@@ -55,7 +55,7 @@ function Projects() {
         </div>
 
         {/* KART 2 */}
-        <div className="flex-1 bg-amber-200 rounded-2xl p-8 shadow-sm flex flex-col mb-6 ">
+        <div className="flex-1 bg-amber-200 dark:bg-[#2D3235] rounded-2xl p-8 shadow-sm flex flex-col mb-6 ">
           {/* Üst İçerik: flex-grow ile boşluğu doldurur, böylece görseli aşağı iter */}
           <div className="grow">
             <h5 className="font-playfair font-bold text-[29px]">Project 1</h5>
@@ -71,10 +71,10 @@ function Projects() {
               totam!
             </p>
             <div className="grid grid-cols-2 xs:grid-cols-3 gap-2 w-fit text-center font-inter py-6 mb-6">
-              <div className="bg-white px-4 py-2 rounded-3xl">react</div>
-              <div className="bg-white px-4 py-2 rounded-3xl">axios</div>
-              <div className="bg-white px-4 py-2 rounded-3xl">vercel</div>
-              <div className="bg-white px-4 py-2 rounded-3xl w-fit">tailwind</div>
+              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">react</div>
+              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">axios</div>
+              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">vercel</div>
+              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl w-fit">tailwind</div>
             </div>
             <div className="flex justify-between items-center mb-8">
               <a className="sm:text-[18px] font-medium border-b border-black">
@@ -90,13 +90,13 @@ function Projects() {
           <div className="w-full flex justify-center -mb-16 mt-6">
             <div className="relative w-[85%] md:w-full max-w-sm">
               <img
-                src="src/assets/laptops/mac.svg"
+                src="/laptops/mac.svg"
                 className=" object-contain"
                 alt="Project Preview"
               />
               <div className="absolute top-[5%] left-[4%] w-[92%] h-[77%] overflow-hidden rounded-xs">
                 <img
-                  src="src/assets/laptops/left.svg" // Buraya kendi proje fotoğrafını koy
+                  src="/laptops/left.svg" 
                   className="w-full h-full object-cover object-top"
                   alt="Screen Content"
                 />

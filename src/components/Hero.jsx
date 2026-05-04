@@ -2,8 +2,6 @@ import { MoveRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Bar } from "./icons/Bar";
 
-
-
 function Hero() {
   const { langData } = useLanguage();
   const { greeting, intro, cta } = langData.heroSection;
@@ -26,16 +24,17 @@ function Hero() {
             <a
               href="https://www.linkedin.com/in/mustafacskn00/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
-                src="src/assets/linkedin.svg"
+                src="/linkedin.svg" // Güncellendi
                 className="w-8 h-8 dark:invert"
                 alt="Linkedin"
               />
             </a>
-            <a href="https://github.com/the-mustafacoskun" target="_blank">
+            <a href="https://github.com/the-mustafacoskun" target="_blank" rel="noreferrer">
               <img
-                src="src/assets/github.svg"
+                src="/github.svg" // Güncellendi
                 className="w-8 h-8 dark:invert"
                 alt="Github"
               />
@@ -52,7 +51,6 @@ function Hero() {
               <span className="text-pink-600 font-medium"> {cta.services}</span>
               {cta.post}
 
-              {/* Email kısmını alt satıra veya yanına kontrollü sabitlemek için block/inline-block ayarı */}
               <span className="group inline-flex items-center ml-2 whitespace-nowrap align-middle">
                 <MoveRight className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:translate-x-2 text-pink-600" />
                 <a
@@ -72,11 +70,10 @@ function Hero() {
         <div className="absolute -top-4 -left-4 w-full h-full bg-pink-600 rounded-4xl z-0"></div>
         <div className="relative z-10 w-full h-full bg-gray-300 rounded-4xl overflow-hidden shadow-2xl">
           <img
-            src="src/assets/foto.svg"
+            src="/mustafaProfile.jpg" // foto.svg yerine mustafaProfile.jpg konuldu
             className="w-full h-full object-cover"
             alt="Mustafa"
           />
-         
         </div>
       </div>
     </section>

@@ -4,17 +4,17 @@ export const data = {
             greeting: "Hi! 👋",
             intro:
                 "I’m Mustafa. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
-            profileImage: "src/assets/mustafaProfile.jpg",
+            profileImage: "/mustafaProfile.jpg",
             socials: [
                 {
-                    logo: "src/assets/linkedin.svg",
+                    logo: "/linkedin.svg",
                     alt_text: "linkedin",
-                    link: "https://www.linkedin.com/in/mustafacskn00/",
+                    link: "https://linkedin.com",
                 },
                 {
-                    logo: "src/assets/github.svg",
+                    logo: "/github.svg",
                     alt_text: "github",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
             ],
             cta: {
@@ -30,27 +30,27 @@ export const data = {
             skills: [
                 {
                     name: "Javascript",
-                    icon: "src/assets/js.svg",
+                    icon: "/js.svg",
                 },
                 {
                     name: "React",
-                    icon: "src/assets/react.svg",
+                    icon: "/react.svg",
                 },
                 {
                     name: "Tailwind",
-                    icon: "src/assets/tailwindcss.svg",
+                    icon: "/tailwindcss.svg",
                 },
                 {
                     name: "Redux",
-                    icon: "src/assets/redux.svg",
+                    icon: "/redux.svg",
                 },
                 {
                     name: "VS Code",
-                    icon: "src/assets/vscode.svg",
+                    icon: "/vscode.svg",
                 },
                 {
                     name: "Figma",
-                    icon: "src/assets/figma.svg",
+                    icon: "/figma.svg",
                 },
             ],
         },
@@ -81,15 +81,15 @@ export const data = {
             socials: [
                 {
                     name: "Github",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
                 {
                     name: "Personal Blog",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
                 {
                     name: "Linkedin",
-                    link: "https://www.linkedin.com/in/mustafacskn00/",
+                    link: "https://linkedin.com",
                 },
                 {
                     name: "Email",
@@ -105,17 +105,17 @@ export const data = {
             greeting: "Selam! 👋",
             intro:
                 "Ben Mustafa. Full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünleri geliştiriyorum. Tanışalım!",
-            profileImage: "src/assets/mustafaProfile.jpg",
+            profileImage: "/mustafaProfile.jpg",
             socials: [
                 {
-                    logo: "src/assets/linkedin.svg",
+                    logo: "/linkedin.svg",
                     alt_text: "linkedin",
-                    link: "https://www.linkedin.com/in/mustafacskn00/",
+                    link: "https://linkedin.com",
                 },
                 {
-                    logo: "src/assets/github.svg",
+                    logo: "/github.svg",
                     alt_text: "github",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
             ],
            cta: {
@@ -131,27 +131,27 @@ export const data = {
             skills: [
                 {
                     name: "Javascript",
-                    icon: "src/assets/js.svg",
+                    icon: "/js.svg",
                 },
                 {
                     name: "React",
-                    icon: "src/assets/react.svg",
+                    icon: "/react.svg",
                 },
                 {
                     name: "Tailwind",
-                    icon: "src/assets/tailwindcss.svg",
+                    icon: "/tailwindcss.svg",
                 },
                 {
                     name: "Redux",
-                    icon: "src/assets/redux.svg",
+                    icon: "/redux.svg",
                 },
                 {
                     name: "VS Code",
-                    icon: "src/assets/vscode.svg",
+                    icon: "/vscode.svg",
                 },
                 {
                     name: "Figma",
-                    icon: "src/assets/figma.svg",
+                    icon: "/figma.svg",
                 },
             ],
         },
@@ -182,15 +182,15 @@ export const data = {
             socials: [
                 {
                     name: "Github",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
                 {
                     name: "Kişisel Blog",
-                    link: "https://github.com/the-mustafacoskun",
+                    link: "https://github.com",
                 },
                 {
                     name: "Linkedin",
-                    link: "https://www.linkedin.com/in/mustafacskn00/",
+                    link: "https://linkedin.com",
                 },
                 {
                     name: "E-posta",
