@@ -1,4 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
+import { Bar } from "./icons/Bar";
 
 function Profile() {
   const { langData } = useLanguage();
@@ -20,7 +21,7 @@ function Profile() {
   } = langData.profileSection.personalInfo;
 
   return (
-    <div className="w-full flex flex-col gap-y-8 items-center md:items-start">
+    <section className="w-full flex flex-col gap-y-8 items-center md:items-start">
       {/* Başlık */}
       <div className="w-full px-1 md:px-0">
         <h3 className="text-4xl font-inter text-center ">
@@ -32,10 +33,10 @@ function Profile() {
         {/* KART ALANI */}
         <div className="relative flex-1 max-w-lg">
           {/* Dekoratif Arka Plan (Gölge efekti) */}
-          <div className="absolute top-3 left-3 w-full h-full bg-[#525252] dark:bg-[#252525] rounded-xl z-0"></div>
+          <div className="absolute top-3 left-3 w-full h-full bg-[#9e9c9c] dark:bg-[#858484] rounded-xl z-0"></div>
           <div className="relative z-10 w-full h-auto bg-white  dark:bg-[#525252] rounded-xl shadow-xl p-8">
-            <div className="flex flex-col gap-4 text-[18px]">
-              <h4 className="text-[#EA2678] text-2xl font-playfair mb-2">
+            <div className="flex flex-col gap-4  sm:text-[18px]">
+              <h4 className="text-[#EA2678] sm:text-2xl text-xl font-playfair mb-2">
                 {subTitle}
               </h4>
 
@@ -61,16 +62,19 @@ function Profile() {
         </div>
 
         {/* ABOUT ME ALANI */}
-        <div className="flex-1 flex flex-col gap-6 max-w-lg">
-          <h4 className="font-playfair text-[24px] text-center md:text-left">
+        <article className="flex-1 flex flex-col gap-6 max-w-lg">
+          <div className="relative">
+            <Bar className='absolute  top-5 left-3/9   sm:-left-4 rounded-2xl w-22.5 h-4.5 text-[#82BBFF]'/>
+          <h4 className="font-playfair relative z-10 text-[24px] text-center md:text-left">
             {langData.profileSection.aboutMe.subTitle}
           </h4>
-          <p className="text-[18px] leading-relaxed">
+          </div>
+          <p className="sm:text-[18px]  leading-relaxed">
             {langData.profileSection.aboutMe.text}
           </p>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 }
 

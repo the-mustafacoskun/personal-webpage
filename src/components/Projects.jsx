@@ -2,7 +2,7 @@ import { MoveRight } from "lucide-react";
 
 function Projects() {
   return (
-    <div className="w-full flex flex-col">
+    <section className="w-full flex flex-col">
       <h4 className="text-4xl mb-12 font-playfair text-center  md:px-1">
         Projects
       </h4>
@@ -23,14 +23,14 @@ function Projects() {
               <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">react</div>
               <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">axios</div>
               <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">vercel</div>
-              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl">tailwind</div>
+              <div className="bg-white dark:bg-darkMid px-4 py-2 rounded-3xl w-fit">tailwind</div>
             </div>
             <div className="flex justify-between items-center mb-8">
-              <a className="text-[18px] font-medium border-b border-black">
+              <a className="sm:text-[18px] font-medium border-b border-black">
                 View on Github
               </a>
               <a className="flex items-center gap-2 group cursor-pointer w-fit">
-                <span className="text-[18px] font-medium">Go to app</span>
+                <span className="sm:text-[18px] font-medium">Go to app</span>
                 <MoveRight className="w-4 h-4 translate-y-[1.5px] transition-transform group-hover:translate-x-2 ease-in-out" />
               </a>
             </div>
@@ -70,18 +70,18 @@ function Projects() {
               Temporibus quos eaque vel quo culpa molestiae facere, cupiditate
               totam!
             </p>
-            <div className="grid grid-cols-3 gap-2 w-fit text-center font-inter py-6 mb-6">
+            <div className="grid grid-cols-2 xs:grid-cols-3 gap-2 w-fit text-center font-inter py-6 mb-6">
               <div className="bg-white px-4 py-2 rounded-3xl">react</div>
               <div className="bg-white px-4 py-2 rounded-3xl">axios</div>
               <div className="bg-white px-4 py-2 rounded-3xl">vercel</div>
-              <div className="bg-white px-4 py-2 rounded-3xl">tailwind</div>
+              <div className="bg-white px-4 py-2 rounded-3xl w-fit">tailwind</div>
             </div>
             <div className="flex justify-between items-center mb-8">
-              <a className="text-[18px] font-medium border-b border-black">
+              <a className="sm:text-[18px] font-medium border-b border-black">
                 View on Github
               </a>
               <a className="flex items-center gap-2 group cursor-pointer w-fit">
-                <span className="text-[18px] font-medium">Go to app</span>
+                <span className="sm:text-[18px] font-medium">Go to app</span>
                 <MoveRight className="w-4 h-4 translate-y-[1.5px] transition-transform group-hover:translate-x-2 ease-in-out" />
               </a>
             </div>
@@ -105,7 +105,7 @@ function Projects() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

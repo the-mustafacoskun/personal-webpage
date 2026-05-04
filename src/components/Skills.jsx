@@ -1,5 +1,6 @@
 import { useLanguage } from "../contexts/LanguageContext";
 
+
 function Skills() {
   const { langData } = useLanguage();
 
@@ -9,7 +10,8 @@ function Skills() {
   const { title, skills } = langData.skillsSection;
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 my-20">
+    <section className="relative flex flex-col justify-center items-center gap-6 sm:my-16">
+      
       {/* Başlık: Dilden gelen title (Skills veya Yetenekler) */}
       <h2 className="text-5xl mb-14 font-inter font-medium dark:text-white">
         {title}
@@ -39,7 +41,7 @@ function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

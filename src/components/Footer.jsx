@@ -1,12 +1,16 @@
 import { useLanguage } from "../contexts/LanguageContext";
 
+import { BigBar } from "./icons/BigBar";
+
 function Footer() {
   const { langData } = useLanguage();
   const { socials,text } = langData.footerSection;
   return (
-    <div className="flex gap-14 justify-center font-medium font-inter">
-      <div className="text-[42px] max-w-lg text-end ">
-        {text}
+    <footer className="flex gap-14 justify-center font-medium font-inter">
+      <div className="relative text-3xl sm:text-[42px] max-w-lg text-end ">
+        <BigBar className='w-68 z-10 h-4.5 top-8 right-14 absolute text-[#3968A0] ' />
+        <div className="relative z-10">{text}</div>
+        
       </div>
       <div className="flex flex-col text-[24px]">
         {socials.map((social, index) => (
@@ -21,7 +25,7 @@ function Footer() {
         ))}
         
       </div>
-    </div>
+    </footer>
   );
 }
 
