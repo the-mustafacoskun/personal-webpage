@@ -3,10 +3,10 @@ import { useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
 
 export const ToggleTheme=()=> {
-    const {setIsDark,isDark} = useContext(ThemeContext);
+    const {handleToggleTheme,isDark} = useContext(ThemeContext);
   return (
     <div className='flex items-center gap-3 w-44 cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 group'
-        onClick={()=>setIsDark(!isDark)} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') }
+        onClick={handleToggleTheme} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') }
     >
         <button
         
