@@ -7,6 +7,7 @@ export const ToggleTheme=()=> {
   return (
     <div className='flex items-center gap-3 w-44 cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 group'
         onClick={handleToggleTheme} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') }
+        data-cy="theme-toggle-button"
     >
         <button
         
