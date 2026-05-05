@@ -1,9 +1,12 @@
 // Projects.jsx
 import { MoveRight } from "lucide-react";
 import { useProjects } from "../contexts/ProjectContext";
+import { useLanguage } from "../contexts/LanguageContext";
+import { data } from "../data";
 
 export default function Projects() {
   const { repos, loading } = useProjects();
+  const {lang} =useLanguage();
 
   if (loading) return <p className="text-center">Yükleniyor...</p>;
 
@@ -14,14 +17,14 @@ export default function Projects() {
       </h4>
 
       <div className="flex flex-col md:flex-row gap-8 w-full items-stretch">
-        {repos?.map((repo) => (
+        {repos?.map((repo,index) => (
           <div key={repo.id} className={`flex-1  dark:bg-[#2D3235] rounded-2xl p-8 shadow-sm flex flex-col mb-6 ${repo.id%2===0?'bg-[#DDEEFE]':'bg-[#D9F6F1]'}`}>
             <div className="grow">
               <h5 className="font-playfair font-bold text-[29px] capitalize">
                 {repo.name.replace(/-/g, ' ')}
               </h5>
               <p className="mt-4">
-                {repo.description || "Bu proje için bir açıklama girilmemiş."}
+                {lang==='tur'?data.tur.projectsSection.description[index] : repo.description || "Bu proje için bir açıklama girilmemiş."}
               </p>
               
               {/* Teknolojiler (Topics) */}

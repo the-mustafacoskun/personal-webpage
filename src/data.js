@@ -175,8 +175,8 @@ export const data = {
         },
         projectsSection: {
             title: "Projeler",
-            goToAppUrl: "....",
-            imageUrl: "....",
+            description:["Bu çalışma; Context API ile hem global durum yönetimini (state management) hem de kapsamlı çoklu dil desteğini başarıyla uygulayan, modern ve yüksek performanslı bir web portfolyosudur. React tabanlı, ölçeklenebilir bir mimariyle inşa edilen uygulama; Tailwind CSS ile geliştirilmiş Karanlık Tema (Dark Mode) uyumlu arayüzü sayesinde kullanıcıya özelleştirilebilir bir deneyim sunmaktadır. Tasarım tarafında, currentColor stratejisi kullanılarak tema rengine göre anlık olarak güncellenen dinamik SVG bileşenleri tercih edilmiştir.","React ve Tailwind CSS ile geliştirilen bu dinamik sipariş platformu, kullanıcıların pizza seçeneklerini, malzemelerini ve ödeme detaylarını akıcı bir arayüz üzerinden yönetmelerini sağlar. Form doğrulama süreçleri ve anlık fiyat hesaplama mantığıyla güçlendirilen uygulama, Cypress ile yapılan testler sayesinde hatasız bir kullanıcı deneyimi sunar."]
+            
         },
         footerSection: {
             socials: [
