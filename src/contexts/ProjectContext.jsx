@@ -18,8 +18,8 @@ function ProjectContextProvider({ children }) {
           `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`
         );
 
-        const cleanData = response.data
-          .filter((repo) => !repo.fork)
+        const gitProjectsCleanData = response.data
+          .filter((repo) => !repo.fork && repo.homepage !== null && repo.homepage !== "")
           .slice(0, 2)
           .map((repo) => ({
             id: repo.id,
@@ -30,7 +30,7 @@ function ProjectContextProvider({ children }) {
             website: repo.homepage,
           }));
 
-        setRepos(cleanData);
+        setRepos(gitProjectsCleanData);
       } catch (error) {
         console.error('Veri çekilirken hata oluştu', error);
       } finally {

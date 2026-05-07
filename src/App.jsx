@@ -22,9 +22,9 @@ function App() {
         <ThemeContextProvider>
           <ProjectContextProvider>
             {/* SECTION 1: Hero & Header */}
-            <div className="bg-[#F4F4F4] px-8 md:px-14 dark:bg-darkMain dark:text-white  pt-8">
+            <div className="bg-[#F4F4F4]  px-8 md:px-14 dark:bg-darkMain dark:text-white  pt-8">
               {/* Bu iç div, tüm sayfanın genişliğini aynı noktada durdurur */}
-              <div className="max-w-274 mx-auto">
+              <div className="max-w-274  mx-auto">
                 <Header />
                 <Hero />
               </div>

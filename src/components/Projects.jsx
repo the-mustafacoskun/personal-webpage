@@ -6,14 +6,18 @@ import { data } from "../data";
 
 export default function Projects() {
   const { repos, loading } = useProjects();
-  const { lang } = useLanguage();
+  const { lang ,langData} = useLanguage();
+  
+  
+
+  if (!langData) return null;
 
   if (loading) return <p className="text-center">Yükleniyor...</p>;
 
   return (
     <section className="w-full flex flex-col">
       <h4 className="text-4xl mb-12 font-playfair text-center md:px-1">
-        Projects
+        {langData.projectsSection.title}
       </h4>
 
       <div className="flex flex-col md:flex-row gap-8 w-full items-stretch">
