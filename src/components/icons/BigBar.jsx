@@ -1,4 +1,4 @@
-// src/components/icons/BigBar.jsx
+
 
 export const BigBar = ({ className }) => {
   return (

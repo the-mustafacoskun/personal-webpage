@@ -1,4 +1,4 @@
-// src/components/icons/Rect.jsx
+
 
 export const Rect = ({ className }) => {
   return (

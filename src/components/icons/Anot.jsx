@@ -1,4 +1,4 @@
-// src/components/icons/Anot.jsx
+
 
 export const Anot = ({ className }) => {
   return (
@@ -13,7 +13,7 @@ export const Anot = ({ className }) => {
         cy="60.5"
         r="50"
         stroke="currentColor" // Renk kontrolü Tailwind'e verildi
-        strokeWidth="21"      // Orijinal kalınlık korundu
+        strokeWidth="21"      
       />
     </svg>
   );

@@ -4,7 +4,7 @@ import { Bar } from "./icons/Bar";
 function Profile() {
   const { langData } = useLanguage();
 
-  // Safety check: langData henüz yüklenmemişse hata almamak için
+  //  langData henüz yüklenmemişse hata almamak için
   if (!langData) return null;
 
   //nesne yapısına uygun destructuring
@@ -19,6 +19,8 @@ function Profile() {
     preferredRoleText,
     preferredRole,
   } = langData.profileSection.personalInfo;
+  const {aboutMeSubTitle,} = langData.profileSection.aboutMe.subTitle;
+  const {text} = langData.profileSection.aboutMe;
 
   return (
     <section className="w-full flex flex-col gap-y-8 items-center md:items-start">
@@ -66,11 +68,11 @@ function Profile() {
           <div className="relative">
             <Bar className='absolute  top-5 left-3/9   sm:-left-4 rounded-2xl w-22.5 h-4.5 text-[#82BBFF]'/>
           <h4 className="font-playfair relative z-10 text-[24px] text-center md:text-left">
-            {langData.profileSection.aboutMe.subTitle}
+            {aboutMeSubTitle}
           </h4>
           </div>
           <p className="sm:text-[18px]  leading-relaxed">
-            {langData.profileSection.aboutMe.text}
+            {text}
           </p>
         </article>
       </div>

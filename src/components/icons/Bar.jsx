@@ -1,9 +1,9 @@
-// src/components/icons/Bar.jsx
+
 
 export const Bar = ({ className }) => {
   return (
     <svg
-      width="100%" // Esneklik için genişliği %100 yapabilirsin
+      width="100%" 
       height="100%"
       viewBox="0 0 148 31"
       fill="none"
